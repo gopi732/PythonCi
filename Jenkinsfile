@@ -33,7 +33,9 @@ pipeline {
 		}
         stage ('Generate Test Reports') {
             steps {
-                junit 'test-reports/*.xml'       
+		echo '******** Generating Test Reports *********'    
+                junit 'test-reports/*.xml' 
+		echo '******** Generating Test Reports *********'  
             }
         }
 		stage ('Publish Artifactory') {
